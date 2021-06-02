@@ -1,0 +1,4 @@
+DeviceEvents
+| extend DeviceDescription_ = tostring(AdditionalFields.DeviceDescription)
+| where ActionType contains "PnPDeviceConnected"
+| where DeviceDescription_ contains "USB Mass Storage Device"
